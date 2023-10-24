@@ -1,10 +1,14 @@
+import { GiDiceTwentyFacesTwenty } from "react-icons/gi"
 import AttributeCounter from "@/components/AttributeCounter";
 
 export default function Home() {
   return (
-    <main className="bg-[#383838] w-screen h-screen gap-12 text-white flex flex-col items-center justify-center ">
-      <h1 className="text-4xl">CRIADOR DE PERSONAGEM DE <i><strong> RPG</strong></i> - LEVEL 0</h1>
 
+    <main className="bg-[#383838] w-screen h-screen gap-12 text-white flex flex-col items-center justify-center ">
+      <div className="flex flex-col items-center gap-2">
+        <GiDiceTwentyFacesTwenty size={80} />
+        <h1 className="text-4xl">CRIADOR DE PERSONAGEM DE <i><strong> RPG</strong></i> - LEVEL 0</h1>
+      </div>
       <section className="flex flex-col gap-8 text-xl">
         <div className="flex flex-row gap-2">
           <p>Nome: </p>
