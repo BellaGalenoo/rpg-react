@@ -4,32 +4,44 @@ import { FaShieldHalved, FaBrain, FaMasksTheater } from "react-icons/fa6"
 import AttributeCounter from "@/components/AttributeCounter";
 
 export default function Home() {
- const attributes = [
+  const attributes = [
     {
       id: 1,
       Icon: GiBiceps,
-      name: "Força"
+      name: "Força",
+      description: "Esse atributo mede o quão forte o seu personagem vai ser. esse atributo vai ser usado pra testes como atletismo e luta."
     },
     {
       id: 2,
       Icon: IoSpeedometerSharp,
-      name: "Agilidade"
+      name: "Agilidade",
+      description: "Esse atributo mede o quão agil e veloz seu personagem vai ser. Esse atributo vai ser usado em testes como furtividade e iniciativa."
     },
     {
       id: 3,
       Icon: FaShieldHalved,
-      name: "Vigor"
+      name: "Vigor",
+      description: "Esse atributo mede o quanto de porrada seu personagem vai aguentar. Esse atributo vai ser usado em testes de fortitude."
     },
     {
       id: 4,
       Icon: FaBrain,
-      name: "Intelecto"
+      name: "Intelecto",
+      description: "Esse atributo mede o quão espero seu personagem vai ser. esse atributo vai ser usado em testes de ocultismo e investigação."
     },
     {
       id: 5,
       Icon: FaMasksTheater,
-      name: "Presença"
+      name: "Presença",
+      description: "Esse atributo diz o quão apto ele esta mentalmente e o quão ligado com oque esta a volta dele. esse atributo vai ser usado em testes como vontade e percepção. "
     },
+  ]
+
+  const classes = [
+    "Mundano",
+    "Especialista",
+    "Combatente",
+    "Ocultista"
   ]
 
   return (
@@ -47,18 +59,18 @@ export default function Home() {
           <p>Classe:</p>
           <select name="classes" id="classe" className="bg-transparent border w-64 px-2 border-opacity-20 border-white rounded-md">
             <option value="Selecionar">Selecionar</option>
-            <option value="Especialista">Especialista</option>
-            <option value="Combatente">Combatente</option>
-            <option value="Ocultista">Ocultista</option>
+            {
+              classes.map((classe) => <option value={classe}>{classe}</option> )
+            }
           </select>
         </div>
-        <div className="w-[360px]">
+        <div className="w-[360px] ">
           <p className="text-sm opacity-60">
             Selecione ao menos uma classe para ver a descrição dela
           </p>
         </div>
       </section>
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-row gap-10 bg-white/5 p-5 rounded-2xl">
         {
           attributes.map((attribute) => <AttributeCounter attribute={attribute} />)
         }
