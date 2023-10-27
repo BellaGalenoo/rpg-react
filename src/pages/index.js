@@ -70,12 +70,18 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <div className="flex flex-col"> 
+        <p>ATRIBUTOS</p>
       <div className="flex flex-row gap-10 bg-white/5 p-5 rounded-2xl">
         {
           attributes.map((attribute) => <AttributeCounter attribute={attribute} />)
         }
       </div>
+      </div>
       <button className="bg-[#39A571] px-7 py-3 rounded-3xl">criar personagem</button>
+
+
+
     </main>
   )
 }
