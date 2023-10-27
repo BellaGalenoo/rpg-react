@@ -1,6 +1,6 @@
 import { GiDiceTwentyFacesTwenty, GiBiceps } from "react-icons/gi"
 import { IoSpeedometerSharp } from "react-icons/io5"
-import { FaShieldHalved, FaBrain, FaMasksTheater } from "react-icons/fa6"
+import { FaShieldHalved, FaBrain, FaMasksTheater, FaGithub} from "react-icons/fa6"
 import AttributeCounter from "@/components/AttributeCounter";
 
 export default function Home() {
@@ -46,6 +46,14 @@ export default function Home() {
 
   return (
     <main className="bg-[#383838] w-screen h-screen gap-12 text-white flex flex-col items-center justify-center ">
+
+      <div className="absolute right-4 top-3 flex gap-2">
+        <FaGithub size={25}/>
+        <p><a href="https://github.com/BellaGalenoo">github/BellaGalenoo</a></p>
+      </div>
+
+
+
       <div className="flex flex-col items-center gap-2">
         <GiDiceTwentyFacesTwenty size={80} />
         <h1 className="text-4xl">CRIADOR DE PERSONAGEM DE <i><strong> RPG</strong></i> - LEVEL 0</h1>
@@ -60,7 +68,7 @@ export default function Home() {
           <select name="classes" id="classe" className="bg-transparent border w-64 px-2 border-opacity-20 border-white rounded-md">
             <option value="Selecionar">Selecionar</option>
             {
-              classes.map((classe) => <option value={classe}>{classe}</option> )
+              classes.map((classe) => <option value={classe}>{classe}</option>)
             }
           </select>
         </div>
@@ -70,13 +78,13 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <div className="flex flex-col"> 
+      <div className="flex flex-col">
         <p>ATRIBUTOS</p>
-      <div className="flex flex-row gap-10 bg-white/5 p-5 rounded-2xl">
-        {
-          attributes.map((attribute) => <AttributeCounter attribute={attribute} />)
-        }
-      </div>
+        <div className="flex flex-row gap-10 bg-white/5 p-5 rounded-2xl">
+          {
+            attributes.map((attribute) => <AttributeCounter attribute={attribute} />)
+          }
+        </div>
       </div>
       <button className="bg-[#39A571] px-7 py-3 rounded-3xl">criar personagem</button>
 
