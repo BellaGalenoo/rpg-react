@@ -1,9 +1,10 @@
 import { GiDiceTwentyFacesTwenty, GiBiceps } from "react-icons/gi"
 import { IoSpeedometerSharp } from "react-icons/io5"
-import { FaShieldHalved, FaBrain, FaMasksTheater, FaGithub} from "react-icons/fa6"
+import { FaShieldHalved, FaBrain, FaMasksTheater, FaGithub } from "react-icons/fa6"
 import AttributeCounter from "@/components/AttributeCounter";
 
 export default function Home() {
+ 
   const attributes = [
     {
       id: 1,
@@ -46,14 +47,10 @@ export default function Home() {
 
   return (
     <main className="bg-[#383838] w-screen h-screen gap-12 text-white flex flex-col items-center justify-center ">
-
       <div className="absolute right-4 top-3 flex gap-2">
-        <FaGithub size={25}/>
-        <p><a href="https://github.com/BellaGalenoo">github/BellaGalenoo</a></p>
+        <FaGithub size={25} />
+        <p><a href="https://github.com/BellaGalenoo" target="_blank ">github/BellaGalenoo</a></p>
       </div>
-
-
-
       <div className="flex flex-col items-center gap-2">
         <GiDiceTwentyFacesTwenty size={80} />
         <h1 className="text-4xl">CRIADOR DE PERSONAGEM DE <i><strong> RPG</strong></i> - LEVEL 0</h1>
@@ -87,9 +84,6 @@ export default function Home() {
         </div>
       </div>
       <button className="bg-[#39A571] px-7 py-3 rounded-3xl">criar personagem</button>
-
-
-
     </main>
   )
 }
