@@ -107,8 +107,8 @@ export default function Home() {
         </p>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <GiDiceTwentyFacesTwenty size={80} />
-        <h1 className="text-4xl">
+        <GiDiceTwentyFacesTwenty size={70} />
+        <h1 className="text-3xl">
           CRIADOR DE PERSONAGEM DE{" "}
           <i>
             <strong> RPG</strong>
@@ -116,7 +116,7 @@ export default function Home() {
           - LEVEL 0
         </h1>
       </div>
-      <section className="flex flex-col gap-8 text-xl">
+      <section className="flex flex-col gap-3 text-xl">
         <div className="flex flex-row gap-2">
           <p>Nome: </p>
           <input
@@ -145,14 +145,15 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <div className="flex flex-col">
-        <p>ATRIBUTOS</p>
-        <div className="flex flex-row gap-10 bg-white/5 p-5 rounded-2xl">
-          {attributes.map((attribute) => (
+     
+      <div className="flex flex-col gap-2 bg-white/5 p-4 rounded-2xl">
+      <p>ATRIBUTOS</p>
+      <div className="flex flex-row gap-10"> {attributes.map((attribute) => (
             <AttributeCounter attribute={attribute} />
-          ))}
-        </div>
-      </div>
+          ))}</div>
+        </div>  
+
+        
       <button className="bg-[#39A571] px-7 py-3 rounded-3xl">
         criar personagem
       </button>
